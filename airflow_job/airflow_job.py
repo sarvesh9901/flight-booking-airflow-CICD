@@ -42,7 +42,7 @@ with DAG(
         task_id="check_file_arrival",
         bucket=gcs_bucket,
         #my_airflow_projects/my_airflow_project_03/source-dev
-        object=f"my_airflow_projects/my_airflow_project_03/source-{env}/flight_booking.csv",  # Full file path in GCS
+        object=f"my_airflow_project_03/source-{env}/flight_booking.csv",  # Full file path in GCS
         google_cloud_conn_id="google_cloud_default",  # GCP connection
         timeout=300,  # Timeout in seconds
         poke_interval=30,  # Time between checks
